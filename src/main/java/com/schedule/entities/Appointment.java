@@ -3,10 +3,9 @@ package com.schedule.entities;
 import java.io.Serializable;
 import java.util.Date;
 
-public class Appointment implements Serializable {
+public class Appointment implements GenericEntity {
 	
 	private static final long serialVersionUID = 1L;
-	
 	
 	private int id;
 	private String title;

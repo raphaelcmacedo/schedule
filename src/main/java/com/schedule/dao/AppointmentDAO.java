@@ -9,7 +9,7 @@ import java.util.TreeMap;
 
 import com.schedule.entities.Appointment;
 
-public class AppointmentDAO {
+public class AppointmentDAO extends GenericDAO<Appointment> {
 	
 	private static Map<Integer, Appointment> appointments = new TreeMap<Integer, Appointment>();
 	
@@ -20,6 +20,7 @@ public class AppointmentDAO {
 		ap1.setPerson("Loxa");
 		ap1.setTime(new Date());
 		ap1.setWhere("Webex room");
+		ap1.setDescription("Weekly meeting");
 		appointments.put(1, ap1);
 		
 		Appointment ap2 = new Appointment();
@@ -38,10 +39,12 @@ public class AppointmentDAO {
 		
 	}
 	
-	public List<Appointment> listAllAppointments(){
+	@Override
+	public List<Appointment> listAll(){
 		return new ArrayList<Appointment>(appointments.values());
 	}
 	
+	@Override
 	public Appointment getById(int id){
 		return appointments.get(id);
 	}
