@@ -1,0 +1,51 @@
+<div class="container">
+	<h2 class="text-center">Appointment</h2>
+</div>
+
+<form>
+	
+	<div class="row">
+		<div class="col-md-6">
+			<fieldset class="form-group">
+				<label for="title">Title</label> <input class="form-control"
+					id="title" ng-model="appointment.title">
+			</fieldset>
+		</div>
+
+		<div class="col-md-6">
+			<fieldset class="form-group">
+				<label for="where">Where</label> <input class="form-control"
+					id="where" ng-model="appointment.where">
+			</fieldset>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-6">
+			<fieldset class="form-group">
+				<label for="where">Person</label> <input class="form-control"
+					id="person" ng-model="appointment.person">
+			</fieldset>
+		</div>
+
+		<div class="col-md-6">
+			<fieldset class="form-group">
+				<label for="time">Time</label> <input class="form-control"
+					id="time" ng-model="appointment.time">
+			</fieldset>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<fieldset class="form-group">
+				<label for="description">Description</label>
+				<textarea class="form-control" id="description"
+					ng-model="appointment.description">
+				 
+			</fieldset>
+		</div>
+
+	</div>
+
+</form>

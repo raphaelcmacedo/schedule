@@ -9,6 +9,7 @@
 
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+		<link rel="stylesheet" type="text/css" href="css/custom.css">
 
 		<script src="js/lib/angular.min.js"></script>
 		<script src="js/lib/angular-animate.min.js"></script>
@@ -23,89 +24,10 @@
 
 	<body class="container" ng-controller="AppointmentController">
 		<div class="container">
-			<h1 class="text-center">Schedules</h1>
-		</div>
-
-		<div class="alert alert-success" role="alert">
-			{{appointments}}	
-		</div>
-
-		<table st-table="appointments" class="table table-striped">
-			<thead>
-			<tr>
-				<th>ID</th>
-				<th>Title</th>
-				<th>Where</th>
-				<th>Person</th>
-			</tr>
-			</thead>
-			<tbody>
-			<tr ng-repeat="row in appointments">
-				<td>{{row.id}}</td>
-				<td>{{row.title}}</td>
-				<td>{{row.where}}</td>
-				<td>{{row.person}}</td>
-			</tr>
-			</tbody>
-		</table>
-
-		
-		<div class="container">
-			<h2 class="text-center">Appointment</h2>
+			<h1 class="text-center">Schedule</h1>
 		</div>
 		
-		<form>
-		  <fieldset class="form-group">
-		    <div class="input-group">
-			    <input class="form-control" id="filter" placeholder="Enter the ID for search">
-			    <span class="input-group-btn">
-			    	<button ng-click="getById()" class="btn btn-primary">Search</button>
-			    </span>
-		    </div>
-		  </fieldset>
-		  
-		  <div class="row">
-			  <div class="col-md-6">
-			  	<fieldset class="form-group">
-				    <label for="title">Title</label>
-				    <input class="form-control" id="title" readonly="true" ng-model="appointment.title">
-				 </fieldset>
-			  </div>
-			  
-			  <div class="col-md-6">
-			  	<fieldset class="form-group">
-				    <label for="where">Where</label>
-				    <input class="form-control" id="where" readonly="true" ng-model="appointment.where">
-				 </fieldset>
-			  </div>
-		  </div>
-		  
-		  <div class="row">
-			  <div class="col-md-6">
-			  	<fieldset class="form-group">
-				    <label for="where">Where</label>
-				    <input class="form-control" id="where" readonly="true" ng-model="appointment.where">
-				 </fieldset>
-			  </div>
-			  
-			  <div class="col-md-6">
-			  	<fieldset class="form-group">
-				    <label for="time">Where</label>
-				    <input class="form-control" id="time" readonly="true" ng-model="appointment.time">
-				 </fieldset>
-			  </div>
-		  </div>
-		  
-		  <div class="row">
-			  <div class="col-md-12">
-			  	<fieldset class="form-group">
-				    <label for="description">Description</label>
-				    <textarea class="form-control" id="where" readonly="true" ng-model="appointment.description">
-				 </fieldset>
-			  </div>
-			  
-		  </div>
-		  
-		</form>
+		<div ng-view></div>
+
 	</body>
 </html>
